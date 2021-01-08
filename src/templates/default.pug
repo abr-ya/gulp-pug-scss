@@ -1,0 +1,25 @@
+include ../config/main.pug
+
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title
+      block title
+    meta(name='description' content='Описание')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    if googleFonts
+      link(rel='preconnect' href='https://fonts.gstatic.com')
+      link(href='https://fonts.googleapis.com/css2?family='+googleFonts rel='stylesheet')
+    link(href='css/style.css' rel='stylesheet')
+  body
+    include ../components/header.pug
+
+    h1
+      block pageTitle
+
+    div#hello Hello, Pug!!!
+      include ../components/div.pug
+
+    script(src='js/script.js')
+  
