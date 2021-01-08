@@ -1,5 +1,11 @@
 header
-  ul
-    li: a(href="/") Главная
-    li: a(href="#") Пока ничего
-    li: a(href="contacts.html") Контакты
+
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    .navbar-nav
+      a.nav-link(href="/" class={active : pageId === 'index'}) Home
+      a.nav-link(href="plans.html" class={active : pageId === 'plans'}) Plans
+      a.nav-link(href="contacts.html" class={active : pageId === 'contacts'}) Contacts
+
+  div
+    p Это хедер.
+    p ID текущей страницы: #{pageId} (это ещё хедер).

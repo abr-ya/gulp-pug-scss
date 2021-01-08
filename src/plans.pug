@@ -1,0 +1,19 @@
+extends templates/default.pug
+include components/plan/plan.pug
+
+append config
+  - var pageId = 'plans'
+
+block title
+  | Планы
+
+block pageTitle
+  | Планы
+
+block content
+  p Пример использования компонента
+  .wrapper
+    +plan({title: "free", price: 0})
+    +plan({title: "personal", price: 10})
+    +plan({title: "business", price: 50, isBusiness: true})
+    +plan({title: "ultimate", price: 99})
